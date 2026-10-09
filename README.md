@@ -1,98 +1,98 @@
 # LaTeX Copy Selection
 
-Расширение для Chrome. Выделяете на странице текст с формулами и копируете его. В буфер попадает обычный текст, а формулы — как LaTeX: `$...$` и `$$...$$` (или `\(...\)` / `\[...\]`, если так выбрано в настройках).
+[Русская версия](README.ru.md)
 
-Вставляете в Obsidian, Markdown, Overleaf, Telegram или другой редактор, который понимает такие формулы.
+Chrome extension. Select text on a page where formulas are already rendered, then copy. The clipboard gets normal text, and the formulas become LaTeX: `$...$` and `$$...$$` (or `\(...\)` / `\[...\]` if you choose that style).
 
-Это не кнопка «скопировать одну формулу по наведению». Копируется текущее выделение целиком: абзац, несколько формул, подписи.
+Paste into Obsidian, Markdown, Overleaf, Telegram, or any editor that understands those formulas.
 
-Готовая сборка **1.3.4** лежит в папке [`release/`](release/). Её и нужно загружать в Chrome. Zip той же папки: [скачать Release](https://github.com/Ildarg2k/latex-copy-selection/releases/latest).
+This is not a hover button that copies one formula. The whole selection is copied: a paragraph, several formulas, captions.
 
-## Установка
+Ready build **1.3.4** is in [`release/`](release/). Load that folder in Chrome. The same folder as a zip: [download the Release](https://github.com/Ildarg2k/latex-copy-selection/releases/latest).
 
-1. Скачайте [zip Release](https://github.com/Ildarg2k/latex-copy-selection/releases/latest) и распакуйте его **или** возьмите папку [`release/`](release/) из этого репозитория.
-2. Откройте `chrome://extensions` (меню Chrome → Расширения → Управление расширениями).
-3. Включите **Режим разработчика**.
-4. Нажмите **Загрузить распакованное расширение**.
-5. Укажите папку, внутри которой сразу лежит `manifest.json`.
+## Install
 
-В списке появится **LaTeX Copy Selection**. Переключатель должен быть включён.
+1. Download the [Release zip](https://github.com/Ildarg2k/latex-copy-selection/releases/latest) and unzip it, **or** use the [`release/`](release/) folder in this repository.
+2. Open `chrome://extensions` (Chrome menu → Extensions → Manage extensions).
+3. Turn on **Developer mode**.
+4. Click **Load unpacked**.
+5. Choose the folder that contains `manifest.json` directly inside it.
 
-Значок можно закрепить: кнопка-пазл на панели Chrome → булавка у «LaTeX Copy Selection».
+**LaTeX Copy Selection** appears in the list. Its switch must be on.
 
-В папке сборки также есть файл `ИНСТРУКЦИЯ.txt` с тем же текстом.
+Pin the icon: the puzzle button on the Chrome toolbar → pin next to “LaTeX Copy Selection”.
 
-## Как копировать
+## How to copy
 
-1. Откройте страницу, где формулы уже нарисованы.
-2. Выделите фрагмент (можно целый абзац).
-3. Скопируйте: значок расширения → **Copy selection**, либо **Ctrl+C** / **Cmd+C**, если включено **Allow Ctrl+C**.
-4. Вставьте куда нужно. Формулы станут `$...$` или `$$...$$`.
+1. Open a page where formulas are already drawn.
+2. Select a passage (a whole paragraph is fine).
+3. Copy with the extension icon → **Copy selection**, or with **Ctrl+C** / **Cmd+C** when **Allow Ctrl+C** is on.
+4. Paste where you need it. Formulas become `$...$` or `$$...$$`.
 
-Кнопка **Copy selection** работает всегда и после успеха закрывает окошко. Если **Allow Ctrl+C** выключено, клавиатурное копирование остаётся обычным поведением Chrome, а кнопка по-прежнему кладёт выделение в буфер сама.
+**Copy selection** always works and closes the popup after a successful copy. When **Allow Ctrl+C** is off, keyboard copy stays Chrome’s normal copy, and the button still puts the selection on the clipboard by itself.
 
-Если в выделении нет распознанной формулы, в буфер всё равно попадает очищенный текст выделения. Так сайты не дописывают в конец копирования свою подпись.
+If the selection has no recognized formula, the clipboard still receives the cleaned selection text. Sites cannot append their own attribution tail.
 
-## Окно расширения
+## Extension popup
 
-Клик по значку открывает окошко. Подписи в программе на английском.
+Click the icon to open the popup. Labels in the program are English.
 
-- **Copy selection** — скопировать текущее выделение.
-- **Allow copy on this site** — разрешить выделение и правый клик на этом сайте, если страница их блокирует. Также можно скопировать текст из заблокированных полей (например ответы в тесте Stepik). Пока включено, на значке зелёная метка `ON`. Не работает в Canvas и Google Документах.
-- **Allow Ctrl+C** — включено: Ctrl+C / Cmd+C кладёт выделение в буфер так же, как кнопка. Выключено: Ctrl+C — обычное копирование Chrome.
+- **Copy selection** — copy the current selection.
+- **Allow copy on this site** — allow selecting text and the right-click menu on this site when the page blocks them. You can also copy text from disabled fields (for example Stepik quiz answers). While this is on, the icon shows a green `ON` badge. It does not work in Canvas or Google Docs.
+- **Allow Ctrl+C** — on: Ctrl+C / Cmd+C puts the selection on the clipboard the same way as the button. Off: Ctrl+C is Chrome’s normal copy.
 - **Clipboard target**
-  - **Markdown / LaTeX** (по умолчанию) — текст с формулами `$...$` / `$$...$$`. Для Obsidian, Overleaf, Telegram. Картинки из выделения в HTML-части буфера сохраняются.
-  - **Rich / Office** — формулы в LaTeX не переписываются. В буфер уходит исходное выделение, как для LibreOffice или Word, без вставок самого сайта.
-- **Delimiter style** — `$...$` / `$$...$$` или `\(...\)` / `\[...\]`.
+  - **Markdown / LaTeX** (default) — text with `$...$` / `$$...$$`. For Obsidian, Overleaf, Telegram. Images in the selection stay in the HTML clipboard part.
+  - **Rich / Office** — formulas are not rewritten as LaTeX. The clipboard gets the original selection, as for LibreOffice or Word, without text injected by the site.
+- **Delimiter style** — `$...$` / `$$...$$` or `\(...\)` / `\[...\]`.
 
-Настройки сохраняются сразу (надпись Saved).
+Settings are saved immediately (the popup says Saved).
 
-## Где формулы распознаются
+## Where formulas are recognized
 
-Страница должна хранить исходный TeX в HTML, а не только картинку.
+The page must keep the TeX source in the HTML, not only a picture.
 
 - KaTeX
-- MathJax 2 и 3
-- MathML, в том числе Wikipedia
-- HTML arXiv / LaTeXML
-- Gemini (формулы с `data-xpm-latex`)
-- атрибуты `data-math`, `data-latex`, `data-tex`, `data-formula`, `data-equation`
+- MathJax 2 and 3
+- MathML, including Wikipedia
+- arXiv / LaTeXML HTML
+- Gemini (formulas with `data-xpm-latex`)
+- attributes `data-math`, `data-latex`, `data-tex`, `data-formula`, `data-equation`
 
-Из скопированного TeX убираются метки `\tag{...}`. Тонкие пробелы KaTeX (`\,` `\:` `\;`) по возможности восстанавливаются.
+`\tag{...}` marks are removed from the copied TeX. KaTeX thin spaces (`\,` `\:` `\;`) are restored when possible.
 
-## Чего расширение не делает
+## What this extension does not do
 
-- Notion и Google Документы: уравнения там в своём формате.
-- PDF и формулы только картинкой, без TeX в коде страницы.
-- Копирование из самого приложения Telegram. Копировать нужно со страницы в Chrome, затем вставлять в Telegram. Клиент должен уметь формулы в этом чате.
-- Firefox этой сборкой не ставится. Нужен Chrome или другой браузер с расширениями Chrome Manifest V3.
+- Notion and Google Docs keep equations in their own format.
+- PDFs and picture-only formulas have no TeX in the page, so there is nothing to copy as LaTeX.
+- Copying from the Telegram app itself is outside this extension. Copy from the page in Chrome, then paste into Telegram. That chat’s client has to support formulas.
+- This build does not install in Firefox. Use Chrome, or another browser that runs Chrome Manifest V3 extensions.
 
-**LibreOffice / Word.** Обычная вставка часто берёт простой текст. В режиме Markdown / LaTeX этот текст как раз `$...$`, и Writer не превратит его в свою формулу. Если нужен вид «как на сайте» — **Clipboard target → Rich / Office**. Если нужен именно код LaTeX — оставьте Markdown / LaTeX.
+**LibreOffice / Word.** A normal paste often takes plain text. In Markdown / LaTeX mode that plain text is `$...$`, and Writer will not turn it into its own equation. For a look close to the page, choose **Clipboard target → Rich / Office**. For the LaTeX source itself, leave Markdown / LaTeX.
 
-## Обновление и удаление
+## Update and remove
 
-Новая версия: `chrome://extensions` → на карточке расширения кнопка обновления (в режиме разработчика), либо удалите старое и снова загрузите папку.
+New version: `chrome://extensions` → the reload button on the extension card (Developer mode), or remove the old one and load the folder again.
 
-Удаление: `chrome://extensions` → Удалить у «LaTeX Copy Selection».
+Remove: `chrome://extensions` → Remove on “LaTeX Copy Selection”.
 
-## Если не сработало
+## If it did not work
 
-- Расширение включено на `chrome://extensions`?
-- Загружена папка, внутри которой лежит `manifest.json`?
-- **Allow Ctrl+C** выключено? Тогда пользуйтесь кнопкой **Copy selection**.
-- Страница не отдаёт копировать? Включите **Allow copy on this site** и обновите вкладку.
-- На сайте формулы только картинками — LaTeX взять неоткуда.
-- После смены настроек обновите вкладку и скопируйте снова.
-- На карточке расширения нет ошибок?
+- Is the extension enabled on `chrome://extensions`?
+- Did you load the folder that contains `manifest.json`?
+- Is **Allow Ctrl+C** off? Use the **Copy selection** button.
+- Does the page block copying? Turn on **Allow copy on this site** and reload the tab.
+- Are the formulas only pictures? There is no LaTeX to take.
+- After changing settings, reload the tab and copy again.
+- Does the extension card show an error?
 
-## Конфиденциальность
+## Privacy
 
-- Нет аккаунта, аналитики, рекламы и отправки текста на сервер автора.
-- Логика расширения не скачивается из интернета.
-- В хранилище Chrome лежат только настройки: Allow Ctrl+C, режим буфера, вид скобок и список сайтов, где включён Allow copy.
-- Если в Chrome включена синхронизация, эти настройки синхронизирует сам Chrome. Расширение их никуда отдельно не отправляет.
-- Скрипт на странице нужен, чтобы обработать ваше копирование и, если вы включили Allow copy, снять блокировку выделения на этом сайте.
+- No account, analytics, ads, or upload of your text to the author’s server.
+- The extension does not download its logic from the internet.
+- Chrome storage holds only settings: Allow Ctrl+C, clipboard mode, delimiter style, and the list of sites where Allow copy is on.
+- If Chrome Sync is on, Chrome itself syncs those settings. The extension does not send them anywhere else.
+- The script on the page handles your copy and, when you turn on Allow copy, lifts the selection block on that site.
 
-## Лицензия
+## License
 
-MIT — см. [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).

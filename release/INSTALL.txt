@@ -1,15 +1,15 @@
 LaTeX Copy Selection v1.3.4
 
-Подробная инструкция на русском (русифицированный Chrome):
-  откройте файл  ИНСТРУКЦИЯ.txt  в этой же папке.
+Full guide: https://github.com/Ildarg2k/latex-copy-selection
+Русский текст: https://github.com/Ildarg2k/latex-copy-selection/blob/main/README.ru.md
 
-Кратко / Quick install:
+Install:
 1. chrome://extensions
-2. Включите «Режим разработчика» / Developer mode
-3. «Загрузить распакованное расширение» / Load unpacked
-4. Выберите ЭТУ папку (где лежит manifest.json)
+2. Turn on Developer mode
+3. Load unpacked
+4. Select THIS folder (the one that contains manifest.json)
 
-Использование: выделить текст с формулами → значок расширения → Copy
-(или Ctrl+C) → вставить.
+Use: select text with formulas, then the extension icon → Copy
+(or Ctrl+C) → paste.
 
-Версия пакета: 1.3.4 (должна совпадать с chrome://extensions).
+Package version: 1.3.4 (must match chrome://extensions).
