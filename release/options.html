@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LaTeX Copy Selection</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>LaTeX Copy Selection</h1>
+      <p id="extVersion" class="help version-line" hidden></p>
+      <p class="help">
+        Select text with formulas, then click <strong>Copy</strong>. Optionally turn on
+        <strong>Allow Ctrl+C</strong> for keyboard copy.
+      </p>
+
+      <button type="button" id="copyBtn" class="copy-btn">Copy selection</button>
+      <p id="copyStatus" class="copy-status" hidden></p>
+
+      <label class="switch-row">
+        <span class="switch-text">
+          <strong>Allow copy on this site</strong>
+          <span id="allowCopyHost" class="host-label"></span>
+        </span>
+        <input type="checkbox" id="allowCopy" class="switch-input" />
+        <span class="switch-ui" aria-hidden="true"></span>
+      </label>
+
+      <label class="switch-row">
+        <span class="switch-text">
+          <strong>Allow Ctrl+C</strong>
+          <span class="host-label"
+            >Put selection on the clipboard when you press Ctrl+C or Cmd+C</span
+          >
+        </span>
+        <input type="checkbox" id="enabled" class="switch-input" />
+        <span class="switch-ui" aria-hidden="true"></span>
+      </label>
+
+      <fieldset>
+        <legend>Clipboard target</legend>
+        <label class="row">
+          <input type="radio" name="clipboardMode" value="latex" />
+          <span
+            ><strong>Markdown / LaTeX</strong> — Obsidian, Overleaf (<code>$...$</code> in plain
+            text)</span
+          >
+        </label>
+        <label class="row">
+          <input type="radio" name="clipboardMode" value="rich" />
+          <span
+            ><strong>Rich / Office</strong> — LibreOffice, Word-like (no LaTeX rewrite; still
+            selection-only)</span
+          >
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Delimiter style</legend>
+        <label class="row">
+          <input type="radio" name="delimiterStyle" value="dollar" />
+          <span><code>$...$</code> / <code>$$...$$</code></span>
+        </label>
+        <label class="row">
+          <input type="radio" name="delimiterStyle" value="parens" />
+          <span><code>\(...\)</code> / <code>\[...\]</code></span>
+        </label>
+      </fieldset>
+
+      <p id="status" class="status" hidden>Saved</p>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
