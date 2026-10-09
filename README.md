@@ -8,7 +8,7 @@ Paste into Obsidian, Markdown, Overleaf, Telegram, or any editor that understand
 
 This is not a hover button that copies one formula. The whole selection is copied: a paragraph, several formulas, captions.
 
-Ready build **1.3.4** is in [`release/`](release/). Load that folder in Chrome. The same folder as a zip: [download the Release](https://github.com/Ildarg2k/latex-copy-selection/releases/latest).
+Ready build **1.3.5** is in [`release/`](release/). Load that folder in Chrome. The same folder as a zip: [download the Release](https://github.com/Ildarg2k/latex-copy-selection/releases/latest).
 
 ## Install
 

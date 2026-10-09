@@ -8,7 +8,7 @@
 
 Это не кнопка «скопировать одну формулу по наведению». Копируется текущее выделение целиком: абзац, несколько формул, подписи.
 
-Готовая сборка **1.3.4** лежит в папке [`release/`](release/). Её и нужно загружать в Chrome. Zip той же папки: [скачать Release](https://github.com/Ildarg2k/latex-copy-selection/releases/latest).
+Готовая сборка **1.3.5** лежит в папке [`release/`](release/). Её и нужно загружать в Chrome. Zip той же папки: [скачать Release](https://github.com/Ildarg2k/latex-copy-selection/releases/latest).
 
 ## Установка
 

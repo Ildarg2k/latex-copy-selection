@@ -11,8 +11,7 @@
       <h1>LaTeX Copy Selection</h1>
       <p id="extVersion" class="help version-line" hidden></p>
       <p class="help">
-        Select text with formulas, then click <strong>Copy</strong>. Optionally turn on
-        <strong>Allow Ctrl+C</strong> for keyboard copy.
+        Select text with formulas, then <strong>Copy</strong>. <strong>Allow Ctrl+C</strong> uses the keyboard.
       </p>
 
       <button type="button" id="copyBtn" class="copy-btn">Copy selection</button>
@@ -30,9 +29,7 @@
       <label class="switch-row">
         <span class="switch-text">
           <strong>Allow Ctrl+C</strong>
-          <span class="host-label"
-            >Put selection on the clipboard when you press Ctrl+C or Cmd+C</span
-          >
+          <span class="host-label">Ctrl+C or Cmd+C copies the selection</span>
         </span>
         <input type="checkbox" id="enabled" class="switch-input" />
         <span class="switch-ui" aria-hidden="true"></span>
@@ -43,15 +40,13 @@
         <label class="row">
           <input type="radio" name="clipboardMode" value="latex" />
           <span
-            ><strong>Markdown / LaTeX</strong> — Obsidian, Overleaf (<code>$...$</code> in plain
-            text)</span
+            ><strong>Markdown / LaTeX</strong> — <code>$...$</code> for Obsidian, Overleaf</span
           >
         </label>
         <label class="row">
           <input type="radio" name="clipboardMode" value="rich" />
           <span
-            ><strong>Rich / Office</strong> — LibreOffice, Word-like (no LaTeX rewrite; still
-            selection-only)</span
+            ><strong>Rich / Office</strong> — original formatting, no LaTeX rewrite</span
           >
         </label>
       </fieldset>

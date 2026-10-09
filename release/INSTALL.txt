@@ -1,4 +1,4 @@
-LaTeX Copy Selection v1.3.4
+LaTeX Copy Selection v1.3.5
 
 Full guide: https://github.com/Ildarg2k/latex-copy-selection
 Русский текст: https://github.com/Ildarg2k/latex-copy-selection/blob/main/README.ru.md
@@ -12,4 +12,4 @@ Install:
 Use: select text with formulas, then the extension icon → Copy
 (or Ctrl+C) → paste.
 
-Package version: 1.3.4 (must match chrome://extensions).
+Package version: 1.3.5 (must match chrome://extensions).
